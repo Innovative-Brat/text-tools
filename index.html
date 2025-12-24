@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Free Text Tools</title>
+  <title>Free Text Tools Online</title>
+  <meta name="description" content="Free online text tools: uppercase, lowercase, word counter. No signup required.">
 </head>
 <body>
-  <h1>Free Text Utilities</h1>
 
-  <textarea id="input" rows="8" cols="50"></textarea><br><br>
+  <h1>Free Text Tools</h1>
+  <p>Simple, fast, free text utilities.</p>
+
+  <textarea id="input" rows="8" cols="60" placeholder="Paste your text here"></textarea><br><br>
 
   <button onclick="toUpper()">UPPERCASE</button>
   <button onclick="toLower()">lowercase</button>
@@ -26,10 +29,11 @@
     }
 
     function countWords() {
-      let text = document.getElementById("input").value;
-      let count = text.trim().split(/\s+/).length;
+      let text = document.getElementById("input").value.trim();
+      let count = text ? text.split(/\s+/).length : 0;
       document.getElementById("result").innerText = "Words: " + count;
     }
   </script>
+
 </body>
 </html>
