@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Counter Online – Free Tool</title>
+<style>
+body{margin:0;font-family:Arial;background:#f5f7fa}
+.container{max-width:800px;margin:auto;padding:16px}
+textarea{width:100%;min-height:160px;padding:12px;font-size:16px}
+button{margin-top:10px;padding:12px;width:100%}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Word Counter</h1>
+<textarea id="text"></textarea>
+<button onclick="countWords()">Count Words</button>
+<p id="result"></p>
+</div>
+<script>
+function countWords(){
+let t=document.getElementById("text").value.trim();
+document.getElementById("result").innerText =
+"Words: " + (t ? t.split(/\s+/).length : 0);
+}
+</script>
+</body>
+</html>
