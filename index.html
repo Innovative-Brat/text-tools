@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Free Text Tools</title>
+</head>
+<body>
+  <h1>Free Text Utilities</h1>
+
+  <textarea id="input" rows="8" cols="50"></textarea><br><br>
+
+  <button onclick="toUpper()">UPPERCASE</button>
+  <button onclick="toLower()">lowercase</button>
+  <button onclick="countWords()">Word Count</button>
+
+  <p id="result"></p>
+
+  <script>
+    function toUpper() {
+      document.getElementById("input").value =
+        document.getElementById("input").value.toUpperCase();
+    }
+
+    function toLower() {
+      document.getElementById("input").value =
+        document.getElementById("input").value.toLowerCase();
+    }
+
+    function countWords() {
+      let text = document.getElementById("input").value;
+      let count = text.trim().split(/\s+/).length;
+      document.getElementById("result").innerText = "Words: " + count;
+    }
+  </script>
+</body>
+</html>
